@@ -79,6 +79,14 @@ services:
         networks:
             janus.hubl.in:
 
+    # Coturn for STUN support when jitsi P2P mode is enabled
+    coturn:
+        image: linagora/coturn
+        ports:
+            - "3478:3478"
+        networks:
+            janus.hubl.in:
+
 # Custom network so all services can communicate using a FQDN
 networks:
     janus.hubl.in:

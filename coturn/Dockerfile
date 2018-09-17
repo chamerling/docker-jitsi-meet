@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y \
     coturn \
   && rm -rf /var/lib/apt/lists/*
 
-ADD turnserver.conf /etc/turnserver.conf
+COPY rootfs/ /
 EXPOSE 3478
 
 # // TODO
@@ -16,4 +16,6 @@ EXPOSE 3478
 # cert=/etc/ssl/turn_server_cert.pem
 # pkey=/etc/ssl/turn_server_pkey.pem
 
-ENTRYPOINT ["coturn"]
+# RUN [ "sh", "-c", "turnadmin -a -u $USERNAME -p $PASSWORD -r $REALM" ]
+
+ENTRYPOINT ["turnserver"]

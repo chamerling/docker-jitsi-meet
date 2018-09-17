@@ -2,17 +2,9 @@
 
     docker build -t linagora/coturn .
 
-## Hublin ICE servers
-
-```
-    "appIceServers": [
-        {"url": "stun:openpaas-conf.prod1.linagora.com:3478"},
-        {"url": "turn:openpaas-conf.prod1.linagora.com:3478", "username": "username1", "credential": "key1"}
-    ]
-```
-
-TODO:
+## TODO:
 
 - Certificates
-- Realm
+- Realm: `# RUN [ "sh", "-c", "turnadmin -a -u $USERNAME -p $PASSWORD -r $REALM" ]`
+
 
