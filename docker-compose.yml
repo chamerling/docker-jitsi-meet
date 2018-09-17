@@ -83,7 +83,8 @@ services:
     coturn:
         image: linagora/coturn
         ports:
-            - "3478:3478"
+            - "3478:3478/tcp"
+            - "3478:3478/udp"
         networks:
             janus.hubl.in:
 
