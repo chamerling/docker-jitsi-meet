@@ -5,6 +5,6 @@
 ## TODO:
 
 - Certificates
-- Realm: `# RUN [ "sh", "-c", "turnadmin -a -u $USERNAME -p $PASSWORD -r $REALM" ]`
+- Realm
 
 

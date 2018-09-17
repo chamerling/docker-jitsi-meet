@@ -5,21 +5,9 @@ RUN apt-get update && apt-get install -y \
     coturn \
   && rm -rf /var/lib/apt/lists/*
 
-# COPY rootfs/ /
 WORKDIR /app
 ADD . /app
 
 EXPOSE 3478
 
-# // TODO
-# // turnadmin -a -u $USERNAME -p $PASSWORD -r $REALM
-# // check username password and realm in turnserver.conf
-
-# TODO: Need certificates
-# cert=/etc/ssl/turn_server_cert.pem
-# pkey=/etc/ssl/turn_server_pkey.pem
-
-# RUN [ "sh", "-c", "turnadmin -a -u $USERNAME -p $PASSWORD -r $REALM" ]
-
-# ENTRYPOINT ["turnserver"]
-ENTRYPOINT ["bash", "/deploy-turnserver.sh"]
+ENTRYPOINT ["bash", "turnserver.sh"]
