@@ -301,9 +301,7 @@ var config = {
 
         // The STUN servers that will be used in the peer to peer connections
         stunServers: [
-            { urls: 'stun:stun.l.google.com:19302' },
-            { urls: 'stun:stun1.l.google.com:19302' },
-            { urls: 'stun:stun2.l.google.com:19302' }
+            { urls: 'stun:janus.hubl.in:3478' }
         ],
 
         // Sets the ICE transport policy for the p2p connection. At the time
