@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+    # Coturn for STUN support when jitsi P2P mode is enabled
+    coturn:
+        image: linagora/coturn
+        ports:
+            - "3478:3478/tcp"
+            - "3478:3478/udp"
+        networks:
+            meet.jitsi:
